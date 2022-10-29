@@ -24,14 +24,20 @@ function NavBar() {
   };
 
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
-      <Container>
-        <Navbar.Brand href="#home">
+    <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      <Container className="navbar-container">
+        <div className="navbar-section">
+        <Navbar.Brand href="/">
           <img src={""} alt="Logo" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <span className="navbar-toggler-icon"></span>
+        </Navbar.Toggle>
+
+        </div>
+        
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <Nav.Link
               href="#home"
               className={
@@ -60,6 +66,8 @@ function NavBar() {
               Projects
             </Nav.Link>
           </Nav>
+          </Navbar.Collapse>
+          <div className="navbar-section">
           <span className="navbar-text">
             <div className="social-icon">
               <a href="#">
@@ -79,7 +87,10 @@ function NavBar() {
               <span>Let's Connect</span>
             </button>
           </span>
-        </Navbar.Collapse>
+
+          </div>
+          
+
       </Container>
     </Navbar>
   );
