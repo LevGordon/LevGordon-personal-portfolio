@@ -92,21 +92,6 @@ p.danger {
 }
 /************ Navbar Css ************/
 
-.navbar-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-
-}
-.navbar-section {
-    display: flex;
-    flex-direction: row;
-    margin: 0 1vw 0 1vw;
-    
-}
-
-
 nav.navbar {
   padding: 18px 0;
   position: fixed;
