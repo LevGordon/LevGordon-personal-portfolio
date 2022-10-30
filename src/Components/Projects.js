@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap'
+import ProjectCard from './ProjectCard'
 
 function Projects() {
 
@@ -30,9 +31,12 @@ function Projects() {
                     <Tab.Content>
                         <Tab.Pane eventKey='first'>
                             <Row>
-                                {projects.map((project) => {
+                                {projects.map((project, index) => {
                                     return (
-                                        <p>{project.title}</p>
+                                        <ProjectCard 
+                                        key={index}
+                                        {...project}
+                                        />
                                     )
                                 })}
                             </Row>
