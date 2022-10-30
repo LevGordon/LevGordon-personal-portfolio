@@ -41,7 +41,7 @@ function Skills() {
             <Row>
                 <Col>
                 <div className='skill-bx'>
-                    <h2> Skills </h2>
+                    <h2> My Tech Stack </h2>
                     <Carousel responsive={responsive} infinite={true} className='skill-slider'>
                         <div className='item'>
                             <img src={javascript} alt='' />

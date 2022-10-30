@@ -106,7 +106,8 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
+    width: 10%;
+    color: white;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -241,6 +242,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
+
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
@@ -325,7 +327,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
-  margin-top: -60px;
+  margin-top: -40px;
 }
 .skill h2 {
 	font-size: 45px;
@@ -339,7 +341,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin: 14px 0 75px 0;
 }
 .skill-slider {
-  width: 92%;
+  width: 98%;
   margin: 0 auto;
   position: relative;
 }
