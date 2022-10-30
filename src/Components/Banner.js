@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
+import guitarPNG from '../assets/imgs/guitar.png'
 
 function Banner() {
   const [loopNum, setLoopNum] = useState(0)
@@ -53,14 +54,13 @@ function Banner() {
         <Row className='align-items-center'>
           <Col xs={12} md={6} xl={7}>
             <span className='tagline'>Welcome to my Portfolio</span>
-              <h1>{`Hi, I'm Lev Gordon`}{' -'}
-                <span className='wrap'>{''}{text}</span>
-              </h1>
+              <h1>{`Hi, I'm Lev Gordon -`}</h1>
+              <h1 className='wrap'>{'a '}{text}</h1>
             <p>lorem ipsum</p>
             <button onClick={() => console.log('connect')}>Let's Connect!<ArrowRightCircle size={25} /></button>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <img src={''} alt='' />
+            <img src={guitarPNG} alt='' />
           </Col>
         </Row>
       </Container>
