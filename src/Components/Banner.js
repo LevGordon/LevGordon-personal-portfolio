@@ -5,7 +5,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons'
 function Banner() {
   const [loopNum, setLoopNum] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
-  const toRotate = ['JavaScript Developer', 'React.js Developer', 'Node.js Developer']
+  const toRotate = ['JavaScript Developer', 'React.js Developer', 'Node.js Developer', 'Rock Musician']
   const [text, setText] = useState('')
   const period = 2000
   const [delta, setDelta] = useState(300 - Math.random() * 100)
@@ -31,7 +31,7 @@ function Banner() {
     setText(updatedText)
 
     if(isDeleting) {
-      setDelta(prevDelta => prevDelta / 2)
+      setDelta(prevDelta => prevDelta / 1.6)
     }
 
     if(!isDeleting && updatedText === fullText) {
@@ -53,7 +53,9 @@ function Banner() {
         <Row className='align-items-center'>
           <Col xs={12} md={6} xl={7}>
             <span className='tagline'>Welcome to my Portfolio</span>
-            <h1>{`Hi I'm Lev Gordon`}<span className='wrap'>{text}</span></h1>
+              <h1>{`Hi, I'm Lev Gordon`}{' -'}
+                <span className='wrap'>{''}{text}</span>
+              </h1>
             <p>lorem ipsum</p>
             <button onClick={() => console.log('connect')}>Let's Connect!<ArrowRightCircle size={25} /></button>
           </Col>
