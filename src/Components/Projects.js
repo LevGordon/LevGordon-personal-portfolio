@@ -4,20 +4,51 @@ import ProjectCard from './ProjectCard'
 
 function Projects() {
 
-    const projects = []
+    const projects = [
+        { title: 'Restaurant Reservation App',
+        description: 'A full-stack application built with Node, Express, Knex and React',
+        imgUrl: ''
+
+        },
+         {
+            title: "Business Startup",
+            description: "Design & Development",
+            imgUrl: 'projImg2',
+          },
+          {
+            title: "Business Startup",
+            description: "Design & Development",
+            imgUrl: 'projImg3',
+          },
+          {
+            title: "Business Startup",
+            description: "Design & Development",
+            imgUrl: 'projImg1',
+          },
+          {
+            title: "Business Startup",
+            description: "Design & Development",
+            imgUrl: 'projImg2',
+          },
+          {
+            title: "Business Startup",
+            description: "Design & Development",
+            imgUrl: 'projImg3',
+          },
+    ]
 
 
 
 
   return (
-    <section className='project' id='projects'>
+    <section className='project' id='project'>
         <Container>
             <Row>
-                <Col>
+                <Col size={12}>
                     <h2>Projects</h2>
                     <p>Lorem Ipsum</p>
                     <Tab.Container id='projects-tabs' defaultActiveKey='first'>
-                    <Nav>
+                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                         <Nav.Item>
                             <Nav.Link eventKey='first'>Tab One</Nav.Link>
                         </Nav.Item>
