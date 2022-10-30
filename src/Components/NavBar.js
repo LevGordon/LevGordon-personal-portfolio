@@ -67,14 +67,14 @@ function NavBar() {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
-                <img src={navicon1} alt="" />
+              <a href="https://www.linkedin.com/in/lev-j-gordon/" target='_blank' rel='noreferrer noopener'>
+                <img src={navicon1} alt="lev gordon linkedin profile" />
               </a>
-              <a href="#">
-                <img src={navicon2} alt="" />
+              <a href="https://www.facebook.com/Lev.Gordonsa/" target='_blank' rel='noreferrer noopener'>
+                <img src={navicon2} alt="lev gordon facebook profile" />
               </a>
-              <a href="#">
-                <img src={navicon3} alt="" />
+              <a href="https://www.instagram.com/lev_gordon/" target='_blank' rel='noreferrer noopener'>
+                <img src={navicon3} alt="lev gordon instagram profile" />
               </a>
             </div>
             <button
