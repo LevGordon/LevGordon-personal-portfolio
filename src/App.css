@@ -468,3 +468,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+
+.projects-prepic-title {
+  text-decoration: underline white 0.1px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.project-cards-Col {
+  border: 0.1px rgb(35, 35, 35) solid; 
+  border-radius: 25px;
+}
