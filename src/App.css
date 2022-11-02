@@ -464,23 +464,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 60px 0 200px 0;
 }
 
-.contact img {
-  animation: updown 3s linear infinite;
-  width: 18%;
-  rotate: 40deg;
-}
 
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
-}
 .contact h2 {
 	font-size: 45px;
 	font-weight: 700;
@@ -543,4 +527,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .contact form button:hover::before {
   width: 100%;
+}
+
+.contact-spinning-circle {
+  width: 500px;
+  height: 500px;
+  border: 5px dotted white;
+  border-radius: 50%;
+  animation: circle 15s linear infinite;
+}
+
+.contact img {
+  animation: updown 3s linear infinite;
+  width: 18%;
+  rotate: 40deg;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes circle {
+
+  0% {
+    transform: rotate(0deg)translate(0px)rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg)translate(0px)rotate(360deg);
+  }
+
 }

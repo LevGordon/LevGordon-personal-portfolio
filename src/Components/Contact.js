@@ -58,7 +58,10 @@ function Contact() {
         <Container>
             <Row className='align-items-center'>
                 <Col md={6}>
-                    <img src={guitarPNG} alt='lev gordon dream guitar' />
+                    <div className='contact-spinning-circle'>
+                        <img src={guitarPNG} alt='lev gordon dream guitar' />
+                    </div>
+                    
                 </Col>
                 <Col md={6}>
                     <h2>Get in touch with me!</h2>
