@@ -16,6 +16,7 @@ function Contact() {
     const [buttonText, setButtonText] = useState('Send')
     const [message, setMessage] = useState()
     const [emailSent, setEmailSent] = useState(false)
+    const [userIsTyping, setUserIsTyping] = useState(false)
 
     const form = useRef();
   
@@ -54,14 +55,21 @@ function Contact() {
         }, 1500)
 
     }
+
+    const animationChange = () => {
+        setUserIsTyping(true)
+        setTimeout(() => {
+            setUserIsTyping(false)
+        }, 100)
+    }
   
   return (
     <section className='contact' id='contact'>
         <Container>
             <Row className='align-items-center'>
                 <Col md={6}>
-                    <Col className='contact-spinning-circle'>
-                        <img className='guitar-img'src={guitarPNG} alt='lev gordon dream guitar' />
+                    <Col className={userIsTyping ? 'contact-spinning-circle animation-change' : 'contact-spinning-circle'}>
+                        <img className='guitar-img' src={guitarPNG} alt='lev gordon dream guitar' />
                         <img className='laptop-img' src={laptopPNG} alt='lev gordon work laptop' />
                         <img className='video-edit-img' src={videoEdit} alt='lev gordon video editing laptop' />
                         <ul className='contact-ul'>
@@ -77,19 +85,19 @@ function Contact() {
                     <form ref={form} onSubmit={currentlySending}>
                         <Row>
                             <Col sm={6} className='px-1'>
-                                <input type="text" name="first_name" placeholder="First Name" />
+                                <input type="text" name="first_name" onChange={animationChange} placeholder="First Name" />
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input type="text" name="last_name" placeholder="Last Name" />
+                                <input type="text" name="last_name" onChange={animationChange} placeholder="Last Name" />
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input type="email" name="user_email" placeholder="Email" />
+                                <input type="email" name="user_email" onChange={animationChange} placeholder="Email" />
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input type="tel" name="user_phone" placeholder="Phone Number" />
+                                <input type="tel" name="user_phone" onChange={animationChange} placeholder="Phone Number" />
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <textarea row='6' name="message" placeholder="Message" />
+                                <textarea row='6' name="message" onChange={animationChange} placeholder="Message" />
                                 <button type='submit'><span>{buttonText}</span></button>
                             </Col>
                             {

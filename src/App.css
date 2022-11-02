@@ -535,7 +535,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: space-between;
   width: 500px;
   height: 500px;
-  border: 5px dotted white;
+  border: 4px dotted white;
   border-radius: 50%;
   animation: circle 25s linear infinite;
 }
@@ -637,4 +637,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
   animation: circleReverse 25s linear infinite;
   font-size: 19px;
+}
+
+
+.animation-change {
+  border: 6.5px dotted gold;
 }
