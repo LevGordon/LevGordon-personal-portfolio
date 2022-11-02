@@ -249,10 +249,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 .banner .tagline {
+  margin-top: 150px;
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  background: linear-gradient(90.21deg, #6e020d -5.91%, #110255 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
@@ -277,7 +278,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
+  margin-top: 50px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
@@ -290,23 +291,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner button:hover svg {
   margin-left: 25px;
-}
-.banner img {
-  animation: updown 3s linear infinite;
-  width: 40%;
-  rotate: 40deg;
-}
-
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
@@ -350,7 +334,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background: #1e1e1e;
 }
 .project h2 {
 	font-size: 45px;
@@ -371,7 +355,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  background-color: rgba(46, 44, 44, 0.526);
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
@@ -396,7 +380,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(90.21deg, #6e020d -5.91%, #110255 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -426,9 +410,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
   margin-bottom: 24px;
 }
+.proj-imgbx-img-complete {
+  opacity: 1;
+}
+.proj-imgbx-img-incomplete {
+  opacity: 0.1;
+}
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #6e020d -5.91%,#110255 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -465,24 +455,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
 }
 
-.projects-prepic-title {
-  text-decoration: underline white 0.1px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
 
-.project-cards-Col {
-  border: 0.1px rgb(35, 35, 35) solid; 
-  border-radius: 25px;
-}
+
 
 /************ CONTACT CSS ************/
 .contact {
   background: linear-gradient(90.21deg, #6f0e0e -5.91%, #4f0502 111.58%);
   padding: 60px 0 200px 0;
 }
+
 .contact img {
-  width: 92%;
+  animation: updown 3s linear infinite;
+  width: 18%;
+  rotate: 40deg;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
 }
 .contact h2 {
 	font-size: 45px;

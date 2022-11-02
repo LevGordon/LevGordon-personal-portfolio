@@ -1,6 +1,7 @@
 import React, {useRef, useState} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import emailjs from "@emailjs/browser";
+import guitarPNG from '../assets/imgs/guitar.png'
 
 
 const SERVICE = process.env.REACT_APP_EMAILJS_SERVICE
@@ -48,20 +49,16 @@ function Contact() {
             setEmailSent(true)
             setButtonText('Send')
 
-        }, 500)
-
-
+        }, 1500)
 
     }
-
-
-      
+  
   return (
     <section className='contact' id='contact'>
         <Container>
             <Row className='align-items-center'>
                 <Col md={6}>
-                    <img src={''} alt='contact Lev Gordon' />
+                    <img src={guitarPNG} alt='lev gordon dream guitar' />
                 </Col>
                 <Col md={6}>
                     <h2>Get in touch with me!</h2>

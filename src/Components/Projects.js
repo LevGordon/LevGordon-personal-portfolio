@@ -15,37 +15,43 @@ function Projects() {
             title: 'Restaurant Reservation App',
             description: 'A full-stack application built with Node, Express, Knex and React that allows restaurant owner/staff to create/store/manage table reservations',
             imgUrl: PT,
-            link: 'https://github.com/LevGordon/Restaurant-Reservation-app'
+            link: 'https://github.com/LevGordon/Restaurant-Reservation-app',
+            status: "complete"
          },
          {
             title: "Red Morrow Band",
             description: "Frontend multi-page website made with React to showcase a rock band and allows their fans to access music/info about them",
             imgUrl: RM,
-            link: 'https://github.com/LevGordon/RED-MORROW'
+            link: 'https://github.com/LevGordon/RED-MORROW',
+            status: "incomplete"
           },
           {
             title: "TRVL Agency",
             description: "A frontend, mock, multi-page website that displays travel destinations and offers travelling services.",
             imgUrl: TRVL,
-            link: 'https://github.com/LevGordon/Travel-Website-React'
+            link: 'https://github.com/LevGordon/Travel-Website-React',
+            status: "incomplete"
           },
           {
             title: "We Love Movies",
             description: "Backend API / validation / functionality with Node, Express, Knex and PostgreSQL for a website like netflix",
             imgUrl: WLM,
-            link: 'https://github.com/LevGordon/we-love-movies'
+            link: 'https://github.com/LevGordon/we-love-movies',
+            status: "complete"
           },
           {
             title: "Personal Portfolio",
             description: "Lev Gordon's personal potfolio with React (you are looking at it)",
             imgUrl: PP,
-            link: 'https://github.com/LevGordon/LevGordon-personal-portfolio'
+            link: 'https://github.com/LevGordon/LevGordon-personal-portfolio',
+            status: "complete"
           },
           {
             title: "Decoder Ring",
             description: "A frontend JS application that allows two parties to encode and later decode messages using 3 different encryption techniques",
             imgUrl: DR,
-            link: 'https://github.com/LevGordon/Decoder-Ring'
+            link: 'https://github.com/LevGordon/Decoder-Ring',
+            status: "complete"
           },
     ]
 
@@ -53,7 +59,7 @@ function Projects() {
 
 
   return (
-    <section className='project' id='project'>
+    <section className='project' id='projects'>
         <Container>
             <Row>
                 <Col size={12}>
