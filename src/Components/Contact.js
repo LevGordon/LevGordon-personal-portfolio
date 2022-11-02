@@ -38,7 +38,7 @@ function Contact() {
           SERVICE,
           TEMPLATE,
           form.current,
-          PUBLIC_KEY
+          PUBLIC_KEY,
         )
         .then(
           (result) => {
@@ -62,7 +62,7 @@ function Contact() {
             setEmailSent(true)
             setButtonText('Send')
 
-        }, 2000)
+        }, 500)
 
 
 
@@ -82,19 +82,19 @@ function Contact() {
                     <form ref={form} onSubmit={currentlySending}>
                         <Row>
                             <Col sm={6} className='px-1'>
-                                <input type="text" value={formData.first_name} placeholder="First Name" onChange={(e) => onChangeHandler('first_name', e.target.value)}/>
+                                <input type="text" name="first_name" value={formData.first_name} placeholder="First Name" onChange={(e) => onChangeHandler('first_name', e.target.value)}/>
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input type="text" value={formData.last_name} placeholder="Last Name" onChange={(e) => onChangeHandler('last_name', e.target.value)}/>
+                                <input type="text" name="last_name" value={formData.last_name} placeholder="Last Name" onChange={(e) => onChangeHandler('last_name', e.target.value)}/>
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input type="email" value={formData.email} placeholder="Email" onChange={(e) => onChangeHandler('email', e.target.value)}/>
+                                <input type="email" name="user_email" value={formData.email} placeholder="Email" onChange={(e) => onChangeHandler('email', e.target.value)}/>
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input type="tel" value={formData.number} placeholder="Phone Number" onChange={(e) => onChangeHandler('number', e.target.value)}/>
+                                <input type="tel" name="user_phone" value={formData.number} placeholder="Phone Number" onChange={(e) => onChangeHandler('number', e.target.value)}/>
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <textarea row='6' value={formData.message} placeholder="Message" onChange={(e) => onChangeHandler('message', e.target.value)}/>
+                                <textarea row='6' name="message" value={formData.message} placeholder="Message" onChange={(e) => onChangeHandler('message', e.target.value)}/>
                                 <button type='submit'><span>{buttonText}</span></button>
                             </Col>
                             {
