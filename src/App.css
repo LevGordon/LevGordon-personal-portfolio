@@ -16,11 +16,6 @@
 	font-weight: 400;
 }
 
-
-
-/* MOBILE CSS */
-
-
 * {
     margin: 0;
     padding: 0;
@@ -247,10 +242,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('');
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url('/src/assets/imgs/lev-redbackground.png');
+  height: 1000px; /* You must set a specified height */
+  background-position: top; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 .banner .tagline {
   font-weight: 700;
@@ -323,7 +319,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .skill-bx {
-  background: #1d1d1d;
+  background: #252525;
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
@@ -482,7 +478,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ CONTACT CSS ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #6f0e0e -5.91%, #4f0502 111.58%);
   padding: 60px 0 200px 0;
 }
 .contact img {
