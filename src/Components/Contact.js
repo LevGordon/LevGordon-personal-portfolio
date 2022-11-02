@@ -2,6 +2,11 @@ import React, {useRef, useState} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import emailjs from "@emailjs/browser";
 
+
+const SERVICE = process.env.REACT_APP_EMAILJS_SERVICE
+const TEMPLATE = process.env.REACT_APP_EMAILJS_TEMPLATE
+const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+
 function Contact() {
     const initialFormState = {
         first_name: '',
@@ -30,10 +35,10 @@ function Contact() {
   
       emailjs
         .sendForm(
-          "SERVICE",
-          "TEMPLATE",
+          SERVICE,
+          TEMPLATE,
           form.current,
-          "PUBLIC_KEY"
+          PUBLIC_KEY
         )
         .then(
           (result) => {
@@ -52,6 +57,7 @@ function Contact() {
 
         setButtonText('Sending...')
         setTimeout(() => {
+            console.log("CURRENT FORM:", form.current)
             sendEmail(e)
             setEmailSent(true)
             setButtonText('Send')
