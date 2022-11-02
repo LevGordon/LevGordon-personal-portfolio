@@ -530,29 +530,76 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .contact-spinning-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 500px;
   height: 500px;
   border: 5px dotted white;
   border-radius: 50%;
-  animation: circle 15s linear infinite;
+  animation: circle 25s linear infinite;
 }
 
-.contact img {
-  animation: updown 3s linear infinite;
-  width: 18%;
-  rotate: 40deg;
+.contact-spinning-circle img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  rotate: 5deg;
+  overflow: hidden;
 }
 
-@keyframes updown {
+.guitar-img {
+  width: 27%;
+  animation: updownGuitar 25s linear infinite;
+}
+
+.laptop-img {
+  width: 41%; 
+  animation: updownCode 25s linear infinite;
+}
+
+.video-edit-img {
+  width: 41%;
+  animation: updownVideo 25s linear infinite;
+}
+
+@keyframes updownGuitar {
     0% {
-        transform: translateY(-20px);
+        transform: rotate(360deg)translateX(-240px)rotate(360deg);
     }
     50% {
-        transform: translateY(20px);
+        transform: rotate(180deg)translateX(-240px)rotate(180deg);
     }
     100% {
-        transform: translateY(-20px);
+        transform: rotate(0deg)translateX(-240px)rotate(0deg);
     }
+}
+
+@keyframes updownVideo {
+  0% {
+      transform: rotate(360deg)translateX(155px)translateY(-210px)rotate(360deg);
+  }
+  50% {
+      transform: rotate(180deg)translateX(155px)translateY(-210px)rotate(180deg);
+  }
+  100% {
+      transform: rotate(0deg)translateX(155px)translateY(-210px)rotate(0deg);
+  }
+}
+
+@keyframes updownCode {
+  0% {
+      transform: rotate(360deg)translateX(100px)translateY(220px)rotate(360deg);
+  }
+  50% {
+      transform: rotate(180deg)translateX(100px)translateY(220px)rotate(180deg);
+  }
+  100% {
+      transform: rotate(0deg)translateX(100px)translateY(220px)rotate(0deg);
+  }
 }
 
 @keyframes circle {
@@ -564,4 +611,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: rotate(360deg)translate(0px)rotate(360deg);
   }
 
+}
+
+@keyframes circleReverse {
+
+  0% {
+    transform: rotate(360deg)translate(0px)rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg)translate(0px)rotate(0deg);
+  }
+
+}
+
+.contact-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  animation: circleReverse 25s linear infinite;
+  font-size: 19px;
 }

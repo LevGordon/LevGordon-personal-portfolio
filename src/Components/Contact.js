@@ -2,6 +2,8 @@ import React, {useRef, useState} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import emailjs from "@emailjs/browser";
 import guitarPNG from '../assets/imgs/guitar.png'
+import laptopPNG from '../assets/imgs/laptop.png'
+import videoEdit from '../assets/imgs/vid-edit.png'
 
 
 const SERVICE = process.env.REACT_APP_EMAILJS_SERVICE
@@ -58,9 +60,16 @@ function Contact() {
         <Container>
             <Row className='align-items-center'>
                 <Col md={6}>
-                    <div className='contact-spinning-circle'>
-                        <img src={guitarPNG} alt='lev gordon dream guitar' />
-                    </div>
+                    <Col className='contact-spinning-circle'>
+                        <img className='guitar-img'src={guitarPNG} alt='lev gordon dream guitar' />
+                        <img className='laptop-img' src={laptopPNG} alt='lev gordon work laptop' />
+                        <img className='video-edit-img' src={videoEdit} alt='lev gordon video editing laptop' />
+                        <ul className='contact-ul'>
+                            <li>Coding</li>
+                            <li>Music</li>
+                            <li>Video Editing</li>
+                        </ul>
+                    </Col>
                     
                 </Col>
                 <Col md={6}>
