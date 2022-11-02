@@ -1,6 +1,6 @@
-import e from 'express'
-import React, {useState} from 'react'
+import React, {useRef, useState} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import emailjs from "@emailjs/browser";
 
 function Contact() {
     const initialFormState = {
@@ -13,7 +13,8 @@ function Contact() {
 
     const [formData, setFormData] = useState(initialFormState)
     const [buttonText, setButtonText] = useState('Send')
-    const [status, setStatus] = useState({})
+    const [message, setMessage] = useState()
+    const [emailSent, setEmailSent] = useState(false)
 
     const onChangeHandler = (category, value) => {
         setFormData({
@@ -22,30 +23,47 @@ function Contact() {
         })
     }
 
-    const submitHandler = async (e) => {
+    const form = useRef();
+  
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs
+        .sendForm(
+          "SERVICE",
+          "TEMPLATE",
+          form.current,
+          "PUBLIC_KEY"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+            setMessage(error.text)
+          }
+        );
+    };
+
+
+    const currentlySending = (e) => {
         e.preventDefault()
+
         setButtonText('Sending...')
-        let response = await fetch("http://localhost:5000/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type" : "Application/json;charset=utf-8",
-            }, 
-            body: JSON.stringify(formData)
+        setTimeout(() => {
+            sendEmail(e)
+            setEmailSent(true)
+            setButtonText('Send')
 
-        });
-        setButtonText("Send")
-        let result = response.json()
-        setFormData(initialFormState)
+        }, 2000)
 
-        if(result.code === 200) {
-            setStatus({success: true, message: 'Message Sent Succesfully '})
-        } else {
-            setStatus({ success: false, message: 'Something went wrong - please try'})
-        }
+
 
     }
 
 
+      
   return (
     <section className='contact' id='contact'>
         <Container>
@@ -55,7 +73,7 @@ function Contact() {
                 </Col>
                 <Col md={6}>
                     <h2>Get in touch with me!</h2>
-                    <form onSubmit={submitHandler}>
+                    <form ref={form} onSubmit={currentlySending}>
                         <Row>
                             <Col sm={6} className='px-1'>
                                 <input type="text" value={formData.first_name} placeholder="First Name" onChange={(e) => onChangeHandler('first_name', e.target.value)}/>
@@ -74,9 +92,9 @@ function Contact() {
                                 <button type='submit'><span>{buttonText}</span></button>
                             </Col>
                             {
-                                status.message &&
+                                message &&
                                 <Col>
-                                    <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
+                                    <p className={message.error ? "danger" : "success"}>{message}</p>
                                 </Col>
                             }
                         </Row>
