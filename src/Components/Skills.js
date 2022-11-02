@@ -42,7 +42,20 @@ function Skills() {
                 <Col>
                 <div className='skill-bx'>
                     <h2> My Tech Stack </h2>
-                    <Carousel responsive={responsive} infinite={true} className='skill-slider'>
+                    <Carousel 
+                    responsive={responsive} 
+                    infinite={true} 
+                    swipeable={true}
+                    draggable={false}
+                    autoPlay={true}
+                    autoPlaySpeed={3000}
+                    
+                    
+                    
+                    
+                    
+                    
+                    className='skill-slider'>
                         <div className='item'>
                             <img src={javascript} alt='' />
                             <h5>JavaScript</h5>

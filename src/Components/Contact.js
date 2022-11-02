@@ -58,9 +58,13 @@ function Contact() {
 
     const animationChange = () => {
         setUserIsTyping(true)
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setUserIsTyping(false)
         }, 100)
+
+        return () => {
+            clearTimeout(timeout)
+        }
     }
   
   return (
