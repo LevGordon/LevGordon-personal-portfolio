@@ -243,10 +243,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 0;
   padding: 260px 0 100px 0;
   background-image: url('/src/assets/imgs/lev-redbackground.png');
-  height: 1000px; /* You must set a specified height */
-  background-position: top; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  height: 1000px; 
+  background-position: top; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
 }
 .banner .tagline {
   margin-top: 150px;
@@ -645,6 +645,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: 6px dotted gold;
 }
 
+.contact-left {
+  margin-bottom: 100px;
+}
 
 /************ Footer Css ************/
 
@@ -661,3 +664,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 20px;
 }
 
+
+@media only screen and (max-width: 500px) {
+  .banner .tagline {
+    margin-top: 200px;
+  }
+
+  .banner {
+    height: 1010px
+  }
+
+}

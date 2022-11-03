@@ -70,8 +70,8 @@ function Contact() {
   return (
     <section className='contact' id='contact'>
         <Container>
-            <Row className='align-items-center'>
-                <Col md={6}>
+            <Row className='d-flex align-items-center'>
+                <Col xl={6} className='contact-left'>
                     <Col className={userIsTyping ? 'contact-spinning-circle animation-change' : 'contact-spinning-circle'}>
                         <img className='guitar-img' src={guitarPNG} alt='lev gordon dream guitar' />
                         <img className='laptop-img' src={laptopPNG} alt='lev gordon work laptop' />
@@ -84,7 +84,7 @@ function Contact() {
                     </Col>
                     
                 </Col>
-                <Col md={6}>
+                <Col xl={6} className='contact-right'>
                     <h2>Get in touch with me!</h2>
                     <form ref={form} onSubmit={currentlySending}>
                         <Row>
