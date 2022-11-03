@@ -51,7 +51,7 @@ function Banner() {
     <section className='banner' id='home'>
       <Container>
         <Row className='align-items-center'>
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} md={7} xl={8}>
             <span className='tagline'>Welcome to my Portfolio</span>
               <h1>{`Hi, I'm Lev Gordon -`}</h1>
               <h1 className='wrap'>{'a '}{text}</h1>
