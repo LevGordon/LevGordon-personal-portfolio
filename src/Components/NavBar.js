@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import navicon1 from '../assets/imgs/nav-icon1.svg';
-import navicon2 from '../assets/imgs/nav-icon2.svg'
-import navicon3 from '../assets/imgs/nav-icon3.svg'
+import navicon2 from '../assets/imgs/nav-icon2.svg';
+import navicon3 from '../assets/imgs/nav-icon3.svg';
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
@@ -30,7 +30,7 @@ function NavBar() {
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="/">
-          <h1 className='navbar-logo'> Lev Gordon</h1>
+          <h1> Lev Gordon</h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
