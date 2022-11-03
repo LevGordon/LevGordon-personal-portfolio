@@ -9,13 +9,13 @@ import navicon3 from '../assets/imgs/nav-icon3.svg';
 function Footer() {
   return (
     <footer>
-      <Container>
+      <Container className="footer-container">
         <Row className="align-items-center">
           <Col sm={6}>
             <h1> Lev Gordon</h1>
           </Col>
           <Col sm={6} className="text-center text-sm-end">
-            <div className="social icon">
+            <div className="social-icon">
               <a
                 href="https://www.linkedin.com/in/lev-j-gordon/"
                 target="_blank"
