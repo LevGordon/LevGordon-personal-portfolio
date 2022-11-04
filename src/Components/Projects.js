@@ -41,7 +41,7 @@ function Projects() {
           },
           {
             title: "Personal Portfolio",
-            description: "Lev Gordon's personal potfolio with React (you are looking at it)",
+            description: "Lev Gordon's personal potfolio with React and Bootstrap (you are looking at it)",
             imgUrl: PP,
             link: 'https://github.com/LevGordon/LevGordon-personal-portfolio',
             status: "complete"
