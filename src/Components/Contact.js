@@ -57,6 +57,22 @@ function Contact() {
 
     }
 
+    const firstNameRef = useRef();
+    const lastNameRef = useRef();
+    const emailRef = useRef();
+    const phoneRef = useRef();
+    const messageRef = useRef();
+
+    const formValidation = (e) => {
+        e.preventDefault()
+
+        if (!firstNameRef.current.value || !lastNameRef.current.value || !emailRef.current.value || !phoneRef.current.value || !messageRef.current.value) {
+            setMessage("ERROR: Please fill out all of the fields above!")
+          } else {
+            currentlySending(e)
+          }
+    }
+
     const animationChange = () => {
         setUserIsTyping(true)
         const timeout = setTimeout(() => {
@@ -87,22 +103,22 @@ function Contact() {
                 </Col>
                 <Col xl={6} className='contact-right'>
                     <h2>Get in touch with me!</h2>
-                    <form ref={form} onSubmit={currentlySending}>
+                    <form ref={form} onSubmit={formValidation}>
                         <Row>
                             <Col sm={6} className='px-1'>
-                                <input type="text" name="first_name" onChange={animationChange} placeholder="First Name" />
+                                <input ref={firstNameRef} type="text" name="first_name" onChange={animationChange} placeholder="First Name" />
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input type="text" name="last_name" onChange={animationChange} placeholder="Last Name" />
+                                <input ref={lastNameRef} type="text" name="last_name" onChange={animationChange} placeholder="Last Name" />
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input type="email" name="user_email" onChange={animationChange} placeholder="Email" />
+                                <input ref={emailRef} type="email" name="user_email" onChange={animationChange} placeholder="Email" />
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input type="tel" name="user_phone" onChange={animationChange} placeholder="Phone Number" />
+                                <input ref={phoneRef} type="tel" name="user_phone" onChange={animationChange} placeholder="Phone Number" />
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <textarea row='6' name="message" onChange={animationChange} placeholder="Message" />
+                                <textarea ref={messageRef} row='6' name="message" onChange={animationChange} placeholder="Message" />
                                 <button type='submit'><span>{buttonText}</span></button>
                             </Col>
                             {
