@@ -51,6 +51,7 @@ function Contact() {
             sendEmail(e)
             setEmailSent(true)
             setButtonText('Send')
+            setMessage("Email successfully sent!")
 
         }, 1500)
 

@@ -79,9 +79,9 @@ function NavBar() {
             </div>
             <button
               className="vvd"
-              onClick={() => console.log("!!!!!!!!!!!!!")}
+              onClick={() => window.location.replace("/#contact")}
             >
-              <span>Let's Connect</span>
+             <span className="connect-button">Let's Connect</span>
             </button>
           </span>
         </Navbar.Collapse>

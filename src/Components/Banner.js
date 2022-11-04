@@ -56,7 +56,7 @@ function Banner() {
               <h1>{`Hi, I'm Lev Gordon -`}</h1>
               <h1 className='wrap'>{'a '}{text}</h1>
             <p>or simply: a man who wants to change the world for good :D</p>
-            <button onClick={() => console.log('connect')}>Let's Connect!<ArrowRightCircle size={25} /></button>
+            <button onClick={() => window.location.replace("/#contact")}>Let's Connect!<ArrowRightCircle size={25} /></button>
           </Col>
         </Row>
       </Container>
