@@ -124,7 +124,7 @@ function Contact() {
                             {
                                 message &&
                                 <Col>
-                                    <p className={message.error ? "danger" : "success"}>{message}</p>
+                                    <p className={message.includes('ERROR') ? "danger" : "success"}>{message}</p>
                                 </Col>
                             }
                         </Row>
