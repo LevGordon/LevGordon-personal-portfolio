@@ -1,6 +1,9 @@
 import React from 'react'
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap'
 import ProjectCard from './ProjectCard'
+
+import TrackVisibility from 'react-on-screen'
+
 import DR from '../assets/imgs/projects/DR.png'
 import PP from '../assets/imgs/projects/PP.png'
 import PT from '../assets/imgs/projects/PT.png'
@@ -63,41 +66,51 @@ function Projects() {
         <Container>
             <Row>
                 <Col size={12}>
-                    <h2>Projects</h2>
-                    <Tab.Container id='projects-tabs' defaultActiveKey='first'>
-                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                        <Nav.Item>
-                            <Nav.Link eventKey='first'>Tab One</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey='second'>Tab Two</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey='third'>Tab Three</Nav.Link>
-                        </Nav.Item>
-                    </Nav>
-                    <Tab.Content>
-                        <Tab.Pane eventKey='first'>
-                            <Row>
-                                {projects.map((project, index) => {
-                                    return (
-                                        <ProjectCard 
-                                        key={index}
-                                        {...project}
-                                        />
-                                    )
-                                })}
-                            </Row>
+                    <TrackVisibility>
+                    {({ isVisible }) => 
+                        <div className={isVisible ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeOut'} >
+                                <h2>Projects</h2>
+                                </div>}
+                    </TrackVisibility>
+                            <Tab.Container id='projects-tabs' defaultActiveKey='first'>
+                            <TrackVisibility>
+                    {({ isVisible }) => 
+                        <div className={isVisible ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeOut'} >
+                            <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                                <Nav.Item>
+                                    <Nav.Link eventKey='first'>Tab One</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link eventKey='second'>Tab Two</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link eventKey='third'>Tab Three</Nav.Link>
+                                </Nav.Item>
+                            </Nav>
+                            </div>}
+                    </TrackVisibility>
+                            <Tab.Content>
+                                <Tab.Pane eventKey='first'>
+                                    <Row>
+                                        {projects.map((project, index) => {
+                                            return (
+                                                <ProjectCard 
+                                                key={index}
+                                                {...project}
+                                                />
+                                            )
+                                        })}
+                                    </Row>
 
-                        </Tab.Pane>
-                        <Tab.Pane eventKey='second'>
-                            <p>More coming soon</p>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey='third'>
-                            <p>More coming soon</p>
-                        </Tab.Pane>
-                    </Tab.Content>
-                    </Tab.Container>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey='second'>
+                                    <p>More coming soon</p>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey='third'>
+                                    <p>More coming soon</p>
+                                </Tab.Pane>
+                            </Tab.Content>
+                            </Tab.Container>
                 </Col>
             </Row>
         </Container>

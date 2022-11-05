@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
+import TrackVisibility from 'react-on-screen'
 
 function Banner() {
   const [loopNum, setLoopNum] = useState(0)
@@ -52,11 +53,16 @@ function Banner() {
       <Container>
         <Row className='align-items-center'>
           <Col xs={12} md={7} xl={8}>
-            <span className='tagline'>Welcome to my Portfolio</span>
+            <TrackVisibility>
+            {({ isVisible }) =>
+            <div className={isVisible ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeOut'} >
+              <span className='tagline'>Welcome to my Portfolio</span>
               <h1>{`Hi, I'm Lev Gordon -`}</h1>
               <h1 className='wrap'>{'a '}{text}</h1>
-            <p>or simply: a man who wants to change the world for good :D</p>
-            <button onClick={() => window.location.replace("/#contact")}>Let's Connect!<ArrowRightCircle size={25} /></button>
+              <p>or simply: a man who wants to change the world for good :D</p>
+              <button onClick={() => window.location.replace("/#contact")}>Let's Connect!<ArrowRightCircle size={25} /></button>
+            </div>}
+            </TrackVisibility>
           </Col>
         </Row>
       </Container>

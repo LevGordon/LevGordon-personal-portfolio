@@ -66,8 +66,8 @@ function Contact() {
     const formValidation = (e) => {
         e.preventDefault()
 
-        if (!firstNameRef.current.value || !lastNameRef.current.value || !emailRef.current.value || !phoneRef.current.value || !messageRef.current.value) {
-            setMessage("ERROR: Please fill out all of the fields above!")
+        if (!firstNameRef.current.value || !lastNameRef.current.value || !emailRef.current.value || !messageRef.current.value) {
+            setMessage("ERROR: Please fill out all required fields!")
           } else {
             currentlySending(e)
           }
@@ -115,7 +115,7 @@ function Contact() {
                                 <input ref={emailRef} type="email" name="user_email" onChange={animationChange} placeholder="Email" />
                             </Col>
                             <Col sm={6} className='px-1'>
-                                <input ref={phoneRef} type="tel" name="user_phone" onChange={animationChange} placeholder="Phone Number" />
+                                <input ref={phoneRef} type="tel" name="user_phone" onChange={animationChange} placeholder="Phone Number (optional)" />
                             </Col>
                             <Col sm={6} className='px-1'>
                                 <textarea ref={messageRef} row='6' name="message" onChange={animationChange} placeholder="Message" />
