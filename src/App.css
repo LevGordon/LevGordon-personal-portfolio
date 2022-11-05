@@ -16,6 +16,11 @@
 	font-weight: 400;
 }
 
+.not-showing {
+  opacity: 0;
+}
+
+
 * {
     margin: 0;
     padding: 0;
