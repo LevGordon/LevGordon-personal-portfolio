@@ -6,15 +6,16 @@ import TrackVisibility from "react-on-screen";
 function Banner() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [index, setIndex] = useState(1);
   const toRotate = [
     "JavaScript Developer",
     "React.js Developer",
     "Node.js Developer",
     "Rock Musician",
   ];
-  const [text, setText] = useState("");
   const period = 2000;
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -31,21 +32,31 @@ function Banner() {
     let fullText = toRotate[i];
     let updatedText = isDeleting
       ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, fullText.length + 1);
+      : fullText.substring(0, text.length + 1);
 
     setText(updatedText);
 
     if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 1.6);
+      if(delta < 73) {
+        setDelta(72)
+      } else {
+        console.log(delta)
+        setDelta((prevDelta) => prevDelta / 1.6);
+      }
+      
     }
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
+      setIndex(prevIndex => prevIndex - 1);
       setDelta(period);
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
+      setIndex(1);
       setDelta(500);
+    } else {
+      setIndex(prevIndex => prevIndex + 1);
     }
   };
 
@@ -54,7 +65,7 @@ function Banner() {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={7} xl={8}>
-            <TrackVisibility once partialVisibility>
+            <TrackVisibility once partialVisibility >
               {({ isVisible }) => (
                 <div
                   className={
