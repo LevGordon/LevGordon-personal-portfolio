@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import navicon1 from '../assets/imgs/nav-icon1.svg';
-import navicon2 from '../assets/imgs/nav-icon2.svg';
-import navicon3 from '../assets/imgs/nav-icon3.svg';
+import navicon1 from "../assets/imgs/nav-icon1.svg";
+import navicon2 from "../assets/imgs/nav-icon2.svg";
+import navicon3 from "../assets/imgs/nav-icon3.svg";
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
@@ -67,13 +67,25 @@ function NavBar() {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/lev-j-gordon/" target='_blank' rel='noreferrer noopener'>
+              <a
+                href="https://www.linkedin.com/in/lev-j-gordon/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <img src={navicon1} alt="lev gordon linkedin profile" />
               </a>
-              <a href="https://www.facebook.com/Lev.Gordonsa/" target='_blank' rel='noreferrer noopener'>
+              <a
+                href="https://www.facebook.com/Lev.Gordonsa/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <img src={navicon2} alt="lev gordon facebook profile" />
               </a>
-              <a href="https://www.instagram.com/lev_gordon/" target='_blank' rel='noreferrer noopener'>
+              <a
+                href="https://www.instagram.com/lev_gordon/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <img src={navicon3} alt="lev gordon instagram profile" />
               </a>
             </div>
@@ -81,7 +93,7 @@ function NavBar() {
               className="vvd"
               onClick={() => window.location.replace("/#contact")}
             >
-             <span className="connect-button">Let's Connect</span>
+              <span className="connect-button">Let's Connect</span>
             </button>
           </span>
         </Navbar.Collapse>

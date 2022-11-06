@@ -1,10 +1,9 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-import navicon1 from '../assets/imgs/nav-icon1.svg';
-import navicon2 from '../assets/imgs/nav-icon2.svg';
-import navicon3 from '../assets/imgs/nav-icon3.svg';
-
+import navicon1 from "../assets/imgs/nav-icon1.svg";
+import navicon2 from "../assets/imgs/nav-icon2.svg";
+import navicon3 from "../assets/imgs/nav-icon3.svg";
 
 function Footer() {
   return (
