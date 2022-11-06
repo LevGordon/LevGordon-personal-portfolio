@@ -88,7 +88,7 @@ function Contact() {
     <section className='contact' id='contact'>
         <Container>
             <Row className='d-flex align-items-center'>
-                <Col xl={6} className='contact-left d-flex justify-content-center align-items-center'>
+                <Col xl={6} className='contact-left'>
                     <Col className={userIsTyping ? 'contact-spinning-circle animation-change' : 'contact-spinning-circle'}>
                         <img className='guitar-img' src={guitarPNG} alt='lev gordon dream guitar' />
                         <img className='laptop-img' src={laptopPNG} alt='lev gordon work laptop' />
