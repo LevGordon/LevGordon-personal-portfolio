@@ -25,7 +25,7 @@ function Projects() {
     {
       title: "E-commerce Headphone Store",
       description:
-        "A full stack application used for selling products. Made with Next.js and Sanity.io.",
+        "A full stack application used for selling products. Made with Next.js, Sanity.io and Stripe for payments.",
       imgUrl: SS,
       link: "https://github.com/LevGordon/stripe-shop",
       status: "complete",

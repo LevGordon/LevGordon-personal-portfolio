@@ -12,6 +12,7 @@ import nodejs from "../assets/imgs/nodejs-icon.svg";
 import npm from "../assets/imgs/npm-icon.svg";
 import postgresql from "../assets/imgs/postgresql.svg";
 import react from "../assets/imgs/react.svg";
+import next from "../assets/imgs/nextjs-icon.svg";
 
 function Skills() {
   const responsive = {
@@ -47,7 +48,7 @@ function Skills() {
                 swipeable={true}
                 draggable={false}
                 autoPlay={true}
-                autoPlaySpeed={3000}
+                autoPlaySpeed={2000}
                 className="skill-slider"
               >
                 <div className="item">
@@ -57,6 +58,10 @@ function Skills() {
                 <div className="item">
                   <img src={react} alt="" />
                   <h5>React.js</h5>
+                </div>
+                <div className="item">
+                  <img src={next} alt="" />
+                  <h5>Next.js</h5>
                 </div>
                 <div className="item">
                   <img src={nodejs} alt="" />
