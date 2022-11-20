@@ -10,15 +10,24 @@ import PT from "../assets/imgs/projects/PT.png";
 import RM from "../assets/imgs/projects/RM.png";
 import TRVL from "../assets/imgs/projects/TRVL.png";
 import WLM from "../assets/imgs/projects/WLM.png";
+import SS from "../assets/imgs/projects/SS.png";
 
 function Projects() {
-  const projects = [
+  const projects1 = [
     {
       title: "Restaurant Reservation App",
       description:
         "A full-stack application built with Node, Express, Knex and React that allows restaurant owner/staff to create/store/manage table reservations",
       imgUrl: PT,
       link: "https://github.com/LevGordon/Restaurant-Reservation-app",
+      status: "complete",
+    },
+    {
+      title: "E-commerce Headphone Store",
+      description:
+        "A full stack application used for selling products. Made with Next.js and Sanity.io.",
+      imgUrl: SS,
+      link: "https://github.com/LevGordon/stripe-shop",
       status: "complete",
     },
     {
@@ -52,7 +61,10 @@ function Projects() {
       imgUrl: PP,
       link: "https://github.com/LevGordon/LevGordon-personal-portfolio",
       status: "complete",
-    },
+    }
+  ];
+
+  const projects2 = [
     {
       title: "Decoder Ring",
       description:
@@ -61,14 +73,16 @@ function Projects() {
       link: "https://github.com/LevGordon/Decoder-Ring",
       status: "complete",
     },
-  ];
+  ]
+
+  
 
   return (
     <section className="project" id="projects">
       <Container>
         <Row>
           <Col size={12}>
-            <TrackVisibility once partialVisibility>
+            <TrackVisibility partialVisibility once>
               {({ isVisible }) => (
                 <div
                   className={
@@ -112,13 +126,18 @@ function Projects() {
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   <Row>
-                    {projects.map((project, index) => {
+                    {projects1.map((project, index) => {
                       return <ProjectCard key={index} {...project} />;
                     })}
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
                   <p>More coming soon</p>
+                  <Row>
+                  {projects2.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
                   <p>More coming soon</p>
