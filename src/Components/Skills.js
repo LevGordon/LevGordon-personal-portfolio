@@ -46,7 +46,7 @@ function Skills() {
                 responsive={responsive}
                 infinite={true}
                 swipeable={true}
-                draggable={false}
+                draggable={true}
                 autoPlay={true}
                 autoPlaySpeed={2000}
                 className="skill-slider"

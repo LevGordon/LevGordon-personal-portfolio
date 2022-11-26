@@ -11,6 +11,7 @@ import RM from "../assets/imgs/projects/RM.png";
 import TRVL from "../assets/imgs/projects/TRVL.png";
 import WLM from "../assets/imgs/projects/WLM.png";
 import SS from "../assets/imgs/projects/SS.png";
+import FD from '../assets/imgs/projects/FD.png'
 
 function Projects() {
   const projects1 = [
@@ -31,12 +32,12 @@ function Projects() {
       status: "complete",
     },
     {
-      title: "Red Morrow Band",
+      title: "GPT-3 AI website with Figma design",
       description:
-        "Frontend multi-page website made with React to showcase a rock band and allows their fans to access music/info about them",
-      imgUrl: RM,
-      link: "https://github.com/LevGordon/RED-MORROW",
-      status: "incomplete",
+        "A front-end static website coded based on an existing Figma design. Made with React.js and standard CSS to comply with figma.",
+      imgUrl: FD,
+      link: "https://github.com/LevGordon/GPT3-AI-figma",
+      status: "complete",
     },
     {
       title: "TRVL Agency",
@@ -44,12 +45,12 @@ function Projects() {
         "A frontend, mock, multi-page website that displays travel destinations and offers travelling services.",
       imgUrl: TRVL,
       link: "https://github.com/LevGordon/Travel-Website-React",
-      status: "incomplete",
+      status: "complete",
     },
     {
       title: "We Love Movies",
       description:
-        "Backend API / validation / functionality with Node, Express, Knex and PostgreSQL for a website like netflix",
+        "Backend API and functionality with Node, Express, Knex and PostgreSQL for a website like netflix",
       imgUrl: WLM,
       link: "https://github.com/LevGordon/we-love-movies",
       status: "complete",
@@ -65,6 +66,14 @@ function Projects() {
   ];
 
   const projects2 = [
+    {
+      title: "Red Morrow Band",
+      description:
+        "Frontend multi-page website made with React to showcase a rock band and allows their fans to access music/info about them",
+      imgUrl: RM,
+      link: "https://github.com/LevGordon/RED-MORROW",
+      status: "incomplete",
+    },
     {
       title: "Decoder Ring",
       description:
