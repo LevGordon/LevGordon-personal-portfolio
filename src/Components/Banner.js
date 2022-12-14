@@ -11,6 +11,7 @@ function Banner() {
   const toRotate = [
     "JavaScript Developer",
     "React.js Developer",
+    "Next.js Developer",
     "Node.js Developer",
     "Rock Musician",
   ];
