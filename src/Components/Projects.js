@@ -11,7 +11,8 @@ import RM from "../assets/imgs/projects/RM.png";
 import TRVL from "../assets/imgs/projects/TRVL.png";
 import WLM from "../assets/imgs/projects/WLM.png";
 import SS from "../assets/imgs/projects/SS.png";
-import FD from '../assets/imgs/projects/FD.png'
+import FD from '../assets/imgs/projects/FD.png';
+import MBK from '../assets/imgs/projects/MBK.png';
 
 function Projects() {
   const projects1 = [
@@ -40,19 +41,19 @@ function Projects() {
       status: "complete",
     },
     {
+      title: "Medium Blog Knock-off",
+      description:
+        "Full-stack application written with Next.js, Typescript, Tailwind CSS and Sanity.io as a CMS that allows somebody to write and display articles.",
+      imgUrl: MBK,
+      link: "https://github.com/LevGordon/next-sanity-mediumblog",
+      status: "complete",
+    },
+    {
       title: "TRVL Agency",
       description:
         "A frontend, mock, multi-page website that displays travel destinations and offers travelling services.",
       imgUrl: TRVL,
       link: "https://github.com/LevGordon/Travel-Website-React",
-      status: "complete",
-    },
-    {
-      title: "We Love Movies",
-      description:
-        "Backend API and functionality with Node, Express, Knex and PostgreSQL for a website like netflix",
-      imgUrl: WLM,
-      link: "https://github.com/LevGordon/we-love-movies",
       status: "complete",
     },
     {
@@ -73,6 +74,14 @@ function Projects() {
       imgUrl: RM,
       link: "https://github.com/LevGordon/RED-MORROW",
       status: "incomplete",
+    },
+    {
+      title: "We Love Movies",
+      description:
+        "Backend API and functionality with Node, Express, Knex and PostgreSQL for a website like netflix",
+      imgUrl: WLM,
+      link: "https://github.com/LevGordon/we-love-movies",
+      status: "complete",
     },
     {
       title: "Decoder Ring",
