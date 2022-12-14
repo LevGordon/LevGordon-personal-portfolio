@@ -13,6 +13,7 @@ import npm from "../assets/imgs/npm-icon.svg";
 import postgresql from "../assets/imgs/postgresql.svg";
 import react from "../assets/imgs/react.svg";
 import next from "../assets/imgs/nextjs-icon.svg";
+import typescript from "../assets/imgs/typescript-icon.svg"
 
 function Skills() {
   const responsive = {
@@ -62,6 +63,10 @@ function Skills() {
                 <div className="item">
                   <img src={next} alt="" />
                   <h5>Next.js</h5>
+                </div>
+                <div className="item">
+                  <img src={typescript} alt="" />
+                  <h5>TypeScript</h5>
                 </div>
                 <div className="item">
                   <img src={nodejs} alt="" />
